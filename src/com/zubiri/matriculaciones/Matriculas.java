@@ -6,25 +6,21 @@ import java.util.Scanner;
 
 public class Matriculas {
 	
+	//constructor
+	public static ArrayList<Matricula> anadirMatriculas(Scanner sc){
+		System.out.println("¿Cuantas matriculas quieres guardar?");
+		int opcion = sc.nextInt();
+		for (int i = 0; i < opcion; i++) {
+			matriculas.add(new Matricula(sc));
+		}
+		return matriculas;
+	}
+	
 	//Contador de matrículas
 	public static int numeroMatriculas = 0;
 	//ArrayList de Matricula para guardar las matrículas totales
 	public static ArrayList<Matricula> matriculas = new ArrayList<Matricula>();
 	
-	//Crear matriculas en ArrayList pasado para devolver lleno al Alumno
-	public static ArrayList<Matricula> crearMatriculasAlumno(Scanner sc, ArrayList<Matricula> matriculasAlumno){
-		System.out.println("¿En cuantas asignaturas quieres matricular al alumno? ");
-		try{
-			int opcion = sc.nextInt();
-			for (int i = 0; i < opcion; i++) {
-				matriculasAlumno.add(new Matricula(sc));
-			}
-		}catch(InputMismatchException e){
-			System.out.println("Eso no es un número...");
-			System.out.println(e);
-		}
-		return matriculasAlumno;
-	}
 	//crear matriculas para guardarlas en un arraylist
 	public static void crearMatriculas(Scanner sc) {
 		

@@ -12,7 +12,7 @@ public class Profesores {
 			System.out.println("Cuantos profesores quieres crear: ");
 			int opcion = sc.nextInt();
 			for (int e = 0; e < opcion; e++){
-				new Profesor(sc);
+				profesores.add(new Profesor(sc));
 			}
 		}
 		

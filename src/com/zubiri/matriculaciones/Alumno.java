@@ -19,7 +19,6 @@ public class Alumno extends Persona {
 			this.anoInscripcion = anoInscripcion;
 			this.ciclo = ciclo;
 			this.matriculas = matriculas;
-			Alumnos.alumnos.add(this);
 		}
 		
 		//Constructor 2
@@ -37,9 +36,7 @@ public class Alumno extends Persona {
 			
 			System.out.println("Introduce el nombre del ciclo: ");
 			this.setCiclo(sc.next());
-			this.setMatriculas(Matriculas.crearMatriculasAlumno(sc, this.getMatriculas()));
-			Alumnos.alumnos.add(this);
-			
+			this.setMatriculas(Matriculas.anadirMatriculas(sc));
 		}
 		
 		//String formateado de Alumno
@@ -47,8 +44,9 @@ public class Alumno extends Persona {
 		public String formatted(){
 			String alumnoFormateado =
 					super.formatted() +
-					"Año de primera inscripción: \t" + this.getAnoInscripcion() +
-					"\nNombre del ciclo: \t" + this.getCiclo();
+					"Año de primera inscripción: " + this.getAnoInscripcion() +
+					"\nNombre del ciclo: " + this.getCiclo() +
+					"\nMatriculas del alumno: \n " +Matriculas.formattedMatriculas(this.getMatriculas());
 			return alumnoFormateado;
 		}
 		

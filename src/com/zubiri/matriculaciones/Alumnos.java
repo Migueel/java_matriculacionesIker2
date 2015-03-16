@@ -12,7 +12,7 @@ public class Alumnos {
 			System.out.println("Cuantos alumnos quieres crear: ");
 			int opcion = sc.nextInt();
 			for (int i = 0; i < opcion; i++){
-				new Alumno(sc);
+				alumnos.add(new Alumno(sc));
 			}
 		}
 		

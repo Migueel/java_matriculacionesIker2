@@ -7,8 +7,6 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		
 		Scanner sc = new Scanner(System.in);
-		ArrayList<Matricula> matriculasPasadas = new ArrayList<Matricula>();
-		ArrayList<Matricula> matriculasAlumno = new ArrayList<Matricula>();
 		String nombre;
 		int opcion = 0;
 		

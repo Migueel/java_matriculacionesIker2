@@ -46,8 +46,8 @@ public class Matricula extends Asignatura {
     public String formatted(){
     	String matriculaFormateada =
     			super.formatted() + 
-    			"Año matriculación: \t" + this.getAnoMatriculacion() + 
-    			"\nPrecio: \t" + this.getPrecio();
+    			"\tAño matriculación: " + this.getAnoMatriculacion() + 
+    			"\n\tPrecio: " + this.getPrecio();
     	return matriculaFormateada;
     }
     

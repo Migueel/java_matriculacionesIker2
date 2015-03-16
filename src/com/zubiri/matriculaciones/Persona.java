@@ -38,9 +38,9 @@ public abstract class Persona {
 	
 	public String formatted() {
 		String personaFormateada =
-				"\nDNI: \t" + this.getDni() +
-				"\nNombre: \t" + this.getNombre() +
-				"\nApellido: \t" + this.getApellido() +
+				"\nDNI: " + this.getDni() +
+				"\nNombre: " + this.getNombre() +
+				"\nApellido: " + this.getApellido() +
 				"\n";
 		return personaFormateada;
 	}

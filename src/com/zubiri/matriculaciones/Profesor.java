@@ -11,7 +11,6 @@ public class Profesor extends Persona {
 		super(dni,nombre,apellido);
 		this.titulacion = titulacion;
 		this.departamento = departamento;
-		Profesores.profesores.add(this);
 	}
 	
 	//Constructor 2
@@ -21,7 +20,6 @@ public class Profesor extends Persona {
 		this.setTitulacion(sc.next());
 		System.out.println("Introduce el nombre del departamento: ");
 		this.setDepartamento(sc.next());
-		Profesores.profesores.add(this);
 	}
 	
 	//String formateado de Profesor sobreescribiendo el método formatted de Persona
@@ -29,8 +27,8 @@ public class Profesor extends Persona {
 	public String formatted(){
 		String profesorFormateado =
 				super.formatted() +
-				"Titulación: \t" + this.getTitulacion() + 
-				"\nDepartamento: \t" + this.getDepartamento();
+				"Titulación: " + this.getTitulacion() + 
+				"\nDepartamento: " + this.getDepartamento();
 		return profesorFormateado;
 	}
 	

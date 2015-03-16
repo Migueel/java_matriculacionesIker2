@@ -38,9 +38,9 @@ public class Asignatura {
 	
 	public String formatted() {
 		String asignaturaFormateada =
-				"\nNombre de la asignatura: \t" + this.getNombre() +
-				"\nCréditos: \t" + this.getCreditos() + 
-				"\nProfesor: \t" + this.getProfesor().formatted() + "\n";
+				"\n\tNombre de la asignatura: " + this.getNombre() +
+				"\n\tCréditos: " + this.getCreditos() + 
+				"\n\tDatos del profesor: \n" + this.getProfesor().formatted() + "\n";
 		return asignaturaFormateada;
 	}
 	
